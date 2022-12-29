@@ -57,4 +57,11 @@ help you :D.
 ## 3 -. How to run a container?
 To run a container we need to use the command docker run, this command will download
 the image of the container that we want to run and then it will run it, we can specify
-the version of the image that we want to run, if we don't specify the version it will
+the version of the image that we want to run.
+
+<br>
+
+## 4 -. Creating shortcuts with custom scripts
+
+Another tool that can be used to perform task in a more efficient way is to write python scripts and execute
+this tools from sh. This can be done with echo, python, and with a pipe standard.
