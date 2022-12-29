@@ -3,6 +3,8 @@
 
 ### By [Om Tav at appme](https://appme-servicios.web.app)
 
+![Cover image](cover.png)
+
 <br>
 
 Hello 'world'
