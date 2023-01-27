@@ -1,10 +1,6 @@
 
 # *Briefly-documenting-dockers*
 
-### By [Om Tav at appme](https://appme-servicios.web.app)
-
-![Cover image](cover.png)
-
 <br>
 
 Hello 'world'
@@ -50,9 +46,6 @@ If you are in a linux machine we can install docker with snap.
     $ sudo snap install docker
 ```
 
-For windows or mac, the recomendation is to search the instructions with a chat GPT engine, 
-or to ask our team at [appme](https://appme-servicios.web.app) and we will be happy to 
-help you :D.
 
 <br>
 
