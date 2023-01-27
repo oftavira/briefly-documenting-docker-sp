@@ -15,10 +15,10 @@ Hello 'world'
 
 <br>
 
-Docker is a tool designed to make it easier to create, deploy and run applications by
+Docker is a tool which aims to make it easier to create, deploy and run applications by
 creating containers, a container is a lightweight, standalone and executable package
-that includes everything that an application needs to run (even a complete operative system OS)
-In fact, creaating a docker container is like creating a virtual machine that can run everywhere.
+that includes everything that an application needs to run.In fact, creaating a docker container
+is like creating a virtual machine that can run everywhere.
 
 A real world app is built with many different components, for example, a web app can be
 composed of a web server, a database, an in-memory cache, and so on. Each of these components
@@ -38,7 +38,7 @@ cappabilities due to a high demand of users, or small it down when needed.
 
 <br>
 
-If you are in a linux machine we can install docker with snap.
+In linux we can install docker with snap.
 
 ```
     $ sudo apt update
@@ -50,13 +50,35 @@ If you are in a linux machine we can install docker with snap.
 <br>
 
 ## 3 -. How to run a container?
-To run a container we need to use the command docker run, this command will download
-the image of the container that we want to run and then it will run it, we can specify
-the version of the image that we want to run.
 
-<br>
+Basics: Starting the service
 
-## 4 -. Creating shortcuts with custom scripts
+```
+    $ sudo systemctl start docker
+    $ sudo su
+```
+In the following command replace the term with an image like alpine or debian
+to see the available images
+```
+    $ docker search <TERM2SEARCH> 
+```
 
-Another tool that can be used to perform task in a more efficient way is to write python scripts and execute
-this tools from sh. This can be done with echo, python, and with a pipe standard.
+To pick an image, for example one that offers the capacities to act as a dedicated
+web server, we would like to try nginx
+```
+    $ docker pull nginx
+    $ docker run -d --name firstnginx -p 80:80 nginx
+```
+
+If we want to attach the container to the current terminal
+
+```
+    $ docker run -d --name acutewebsite -p 80:80 nginx
+    $ docker attach acutewebsite
+```
+In a more general way, we can execute commands in the container
+```
+    $ docker run -d --name hackthisserver -p 80:80 nginx
+    $ docker exec -it hackthisserver /bin/bash
+```
+
